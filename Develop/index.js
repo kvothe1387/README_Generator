@@ -19,7 +19,7 @@ const questions = [
     {
         type: "checkbox",
         name: "license",
-        message: "Pleasee select the license this project is utilizing.",
+        message: "he last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).",
         choices: ["MIT", "APACHE2.0", "Boost1.0", "MPL2.0", "BSD2", "BSD3", "none"],
     },
     {
@@ -48,6 +48,11 @@ const questions = [
         message: "List your collaborators, if any, with links to their GitHub profiles.",
         default: "",
     },
+    {
+        type: "input",
+        name: "test",
+        message: "Go the extra mile and write tests for your application. Then provide examples on how to run them here.",
+    },
 ];
 
 // TODO: Create a function to write README file
@@ -56,7 +61,12 @@ function writeToFile(fileName, data) {
 }
 
 // TODO: Create a function to initialize app
-function init() { }
+function init() {
+    inquirer.createPromptModule(questions).then((responses) => {
+        console.log("Creating Professional README.md File. . . ");
+        writeToFile("./dist/README.md", generateMarkdown({ ...responses }));
+    });
+}
 
 // Function call to initialize app
 init();
