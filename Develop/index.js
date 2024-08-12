@@ -2,7 +2,7 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
 const path = require("path");
-const generateMarkdown = require(".Develop\.utils\generateMarkdown.js");
+const generateMarkdown = require("./utils/generateMarkdown");
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -39,6 +39,11 @@ const questions = [
     },
     {
         type: "input",
+        name: "name",
+        message: "Enter your name.",
+    },
+    {
+        type: "input",
         name: "email",
         message: "Please provide a valid email address.",
     },
@@ -62,8 +67,8 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
-    inquirer.createPromptModule(questions).then((responses) => {
-        console.log("Creating Professional README.md File. . . ");
+    inquirer.prompt(questions).then((responses) => {
+        console.log("Creating Professional README.md File... ");
         writeToFile("./dist/README.md", generateMarkdown({ ...responses }));
     });
 }
