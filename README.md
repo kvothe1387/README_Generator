@@ -1,123 +1,76 @@
-# 07 Node.js Challenge: Professional README Generator
+README Generator
+Navigate To:
+Description
+Installation
+Usage
+Guidelines
+Demonstration
+Questions
+Credits
+Description
+Your GitHub profile is an extremely important aspect of your public identity as a developer. A well-crafted one allows you to show off your work to other developers as well as potential employers. An important component of your GitHub profile—and one that many new developers often overlook—is the README file.
 
-## Your Task
+The quality of a README often differentiates a good project from a bad project. A good one takes advantage of the opportunity to explain and showcase what your application does, justify the technologies used, and even talk about some of the challenges you faced and features you hope to implement in the future. A good README helps you stand out among the large crowd of developers putting their work on GitHub.
 
-When creating an open source project on GitHub, it’s important to have a high-quality README for the app. This should include what the app is for, how to use the app, how to install it, how to report issues, and how to make contributions&mdash;this last part increases the likelihood that other developers will contribute to the success of the project. 
+There's no one right way to structure a good README. There is one very wrong way, however, and that is to not include a README at all.
 
-You can quickly and easily create a README file by using a command-line application to generate one. This allows the project creator to devote more time to working on the project.
+With this README generator, you no longer need to create a professional README from scratch. Simply answer a few questions and watch as a README is created before your very eyes.
 
-Your task is to create a command-line application that dynamically generates a professional README.md file from a user's input using the [Inquirer package](https://www.npmjs.com/package/inquirer). Review the [Professional README Guide](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide) as a reminder of everything that a high-quality, professional README should contain. 
+Installation
+Before attempting to use this project, make sure to have these programs installed on your computer:
+VS Code
+GitBash
+Node.js
+Steps to initialize the project:
+Copy Link: Hit the "Code" button within this GitHub repo to copy link
+Clone: Within GitBash, use the command "git clone paste link here"
+NPM: Use the command "npm init -y" to install Node Package Manager
+Inquirer: Use the command "npm install inquirer" to get npm's inquirer package
+Usage
+Once software is downloaded and Node packages are initialized, it's time to get started!
 
-The application will be invoked by using the following command:
+Within the directory for this project, initialize prompts using the command "node index.js".
 
-```bash
-node index.js
-```
+From there, simply enter the necessary information for your project, and voila! A new README file will be generated and placed into the 'dist' folder.
 
-Because this application won’t be deployed, you’ll also need to provide a link to a walkthrough video that demonstrates its functionality. Revisit the Screencastify Tutorial in the prework as a refresher on how to record video from your computer. You’ll need to submit a link to the video _and_ add it to the README of your project.
+Not sure what to input for a certain section? Follow the guidelines outlined below.
 
+Guidelines
+Description: Questions to Consider
 
-## User Story
+What is the app for?
+What was your motivation?
+Why did you build this project?
+What problem does it solve?
+What did you learn?
+What makes your project stand out?
+Installation: What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
 
-```md
-AS A developer
-I WANT a README generator
-SO THAT I can quickly create a professional README for a new project
-```
+Usage: Provide instructions and examples for use. Include screenshots as needed.
 
-## Acceptance Criteria
+Licenses: This lets other developers know what they can and cannot do with your project. If you need help choosing a license, use https://choosealicense.com/
 
-```md
-GIVEN a command-line application that accepts user input
-WHEN I am prompted for information about my application repository
-THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
-WHEN I enter my project title
-THEN this is displayed as the title of the README
-WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
-THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
-WHEN I choose a license for my application from a list of options
-THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
-WHEN I enter my GitHub username
-THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
-WHEN I enter my email address
-THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
-WHEN I click on the links in the Table of Contents
-THEN I am taken to the corresponding section of the README
-```
+Contributing: If you created an application or package and would like other developers to contribute to it, you will want to add guidelines for how to do so. The Contributor Covenant is an industry standard, but you can always write your own.
 
-## Getting Started
+Tests: Go the extra mile and write tests for your application, then provide examples on how to run them.
 
-Here are some guidelines to help you get started:
+Questions: Include your GitHub profile and email so users can reach out to you with any questions about your project.
 
-* Create a `.gitignore` file and include `node_modules/` and `.DS_Store/` so that your `node_modules` directory isn't tracked or uploaded to GitHub. Be sure to create your `.gitignore` file before installing any npm dependencies.
+Credits:
 
-* Make sure that your repo includes a `package.json` with the required dependencies. You can create one by running `npm init` when you first set up the project, before installing any dependencies.
+List your collaborators, if any, with links to their GitHub profiles. Don't forget to include your own name!
+If you used any third-party assets that require attribution, list the creators with links to their primary web presence.
+If you followed tutorials, include links to those here as well.
+Demonstration
+Watch this demo to see the README Generator in action.
 
-* Include a video of the typical user flow through your application. This includes views of the prompts and the responses after their selection.
+Questions
+Have any questions about this project? Reach out!
+GitHub: https://github.com/kvothe1387
+Email: dmccullough488@gmail.com
 
-* Refer to the [Fullstack Blog Video Submission Guide](https://coding-boot-camp.github.io/full-stack/computer-literacy/video-submission-guide) for additional guidance on creating a video.
-
-* Include any other screenshots you deem necessary to help someone who has never been introduced to your application understand the purpose and function of it. This is how you will communicate to potential employers or other developers in the future what you built and why, and to show how it works.
-
-## Grading Requirements
-
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
-
-This Challenge is graded based on the following criteria: 
-
-### Deliverables: 20%
-
-* A sample README generated using the application must be submitted.
-
-* Your GitHub repository containing your application code.
-
-### Walkthrough Video: 27%
-
-* A walkthrough video that demonstrates the functionality of the README generator must be submitted, and a link to the video should be included in your README file.
-
-* The walkthrough video must demonstrate how a user would invoke the application from the command line.
-
-* The walkthrough video must demonstrate how a user would enter responses to all of the prompts in the application.
-
-* The walkthrough video must demonstrate a generated README that matches the user input and has a functioning table of contents.
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the above acceptance criteria plus the following:
-
-	* Uses the [Inquirer package](https://www.npmjs.com/package/inquirer).
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains a high-quality README with description and a link to walkthrough video.
-
-
-## Review
-
+Credits
+David McCullough
 You are required to submit the following for review:
 
-* A walkthrough video demonstrating the functionality of the application.
 
-* A sample README.md file for a project repository generated using your application
-
-* The URL of the GitHub repository, with a unique name and a README describing the project
-
----
-
-© 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
